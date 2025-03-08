@@ -5,6 +5,13 @@
 #ifndef FLIGHT_COMPUTER_INTRANET_COMMANDS_H
 #define FLIGHT_COMPUTER_INTRANET_COMMANDS_H
 
+#define VE_NO  (1 << 5)  
+#define VO_NOC (1 << 4)
+#define ME_B   (1 << 3)
+#define MO_BC  (1 << 2)
+#define IE_NC  (1 << 1)
+#define IO_NCC (1 << 0)
+
 enum class PRBCommand {
     // Write Commands
     TIMESTAMP_MAIN_FSM,
