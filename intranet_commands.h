@@ -14,6 +14,12 @@
 #ifndef AV_INTRANET_COMMANDS_H
 #define AV_INTRANET_COMMANDS_H
 
+/* Slaves addresses */
+#define NET_ADR_DPR_ETH 0x0E
+#define NET_ADR_DPR_LOX 0x0C
+#define NET_ADR_PRB     0x0F
+#define NET_ADR_TRB     0x0A
+
 /* Engine valves map */
 #define PRB_VO_NOC (1 << 5)
 #define PRB_VE_NO  (1 << 4)  
@@ -27,7 +33,7 @@
 #define OFF 0xDE  // Deactivate
 
 /* Havoc DPR */
-enum class DPR_CMD {
+enum class NET_REG_DPR {
     TIMESTAMP_MAIN = 0x00, // W
     WAKE_UP        = 0x01, // W
     IS_WOKEN_UP    = 0x02, // R
@@ -38,7 +44,7 @@ enum class DPR_CMD {
 };
 
 /* Prop Board */
-enum class PRB_CMD {
+enum class NET_REG_PRB {
     TIMESTAMP_MAIN  = 0x00, // W
     WAKE_UP         = 0x01, // W
     IS_WOKEN_UP     = 0x02, // R
@@ -52,11 +58,11 @@ enum class PRB_CMD {
     T_CCC           = 0x09, // R
     P_CIG           = 0x0A, // R
     T_CIG           = 0x0B, // R
-    STATE_VALVES    = 0x0C  // R/W
+    VALVES_STATE    = 0x0C  // R/W
 };
 
 /* Trigger Board */
-enum class TRB_CMD {
+enum class NET_REG_TRB {
     TIMESTAMP_MAIN   = 0x00, // W
     WAKE_UP          = 0x01, // W
     IS_WOKEN_UP      = 0x02, // R
@@ -67,11 +73,11 @@ enum class TRB_CMD {
 };
 
 /* Cameras */
-enum class CAM_CMD {
-    TIMESTAMP_MAIN = 0x00, // W
-    WAKE_UP        = 0x01, // W
-    IS_WOKEN_UP    = 0x02, // R
-    RECORDING      = 0x03  // R/W
-};
+// enum class NET_REG_CAM {
+//     TIMESTAMP_MAIN = 0x00, // W
+//     WAKE_UP        = 0x01, // W
+//     IS_WOKEN_UP    = 0x02, // R
+//     RECORDING      = 0x03  // R/W
+// };
 
 #endif /* AV_INTRANET_COMMANDS_H */
