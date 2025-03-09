@@ -26,6 +26,7 @@
 #define ON  0xAC  // Activate
 #define OFF 0xDE  // Deactivate
 
+/* Havoc DPR */
 enum class DPR_CMD {
     TIMESTAMP_MAIN = 0x00, // W
     WAKE_UP        = 0x01, // W
@@ -36,6 +37,7 @@ enum class DPR_CMD {
     DN_NC          = 0x06  // R
 };
 
+/* Prop Board */
 enum class PRB_CMD {
     TIMESTAMP_MAIN  = 0x00, // W
     WAKE_UP         = 0x01, // W
@@ -53,14 +55,23 @@ enum class PRB_CMD {
     STATE_VALVES    = 0x0C  // R/W
 };
 
+/* Trigger Board */
 enum class TRB_CMD {
-    TIMESTAMP_MAIN  = 0x00, // W
-    WAKE_UP         = 0x01, // W
-    IS_WOKEN_UP     = 0x02, // R
-    CLEAR_TO_IGNITE = 0x03, // W
-    PYRO_CH1        = 0x04, // R/W
-    PYRO_CH2        = 0x05, // R/W
-    PYRO_CH3        = 0x06  // R/W
+    TIMESTAMP_MAIN   = 0x00, // W
+    WAKE_UP          = 0x01, // W
+    IS_WOKEN_UP      = 0x02, // R
+    CLEAR_TO_TRIGGER = 0x03, // W
+    PYRO_CH1         = 0x04, // R/W
+    PYRO_CH2         = 0x05, // R/W
+    PYRO_CH3         = 0x06  // R/W
+};
+
+/* Cameras */
+enum class CAM_CMD {
+    TIMESTAMP_MAIN = 0x00, // W
+    WAKE_UP        = 0x01, // W
+    IS_WOKEN_UP    = 0x02, // R
+    RECORDING      = 0x03  // R/W
 };
 
 #endif /* AV_INTRANET_COMMANDS_H */
