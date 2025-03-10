@@ -62,7 +62,7 @@ enum NET_REG_PRB {
 };
 
 /* Trigger Board */
-enum class NET_REG_TRB {
+enum NET_REG_TRB {
     TIMESTAMP_MAIN   = 0x00, // W
     WAKE_UP          = 0x01, // W
     IS_WOKEN_UP      = 0x02, // R
@@ -73,7 +73,7 @@ enum class NET_REG_TRB {
 };
 
 /* Cameras */
-// enum class NET_REG_CAM {
+// enum NET_REG_CAM {
 //     TIMESTAMP_MAIN = 0x00, // W
 //     WAKE_UP        = 0x01, // W
 //     IS_WOKEN_UP    = 0x02, // R
