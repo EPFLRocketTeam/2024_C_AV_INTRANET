@@ -33,7 +33,7 @@
 #define OFF 0xDE  // Deactivate
 
 /* Havoc DPR */
-enum class NET_REG_DPR {
+enum NET_REG_DPR {
     TIMESTAMP_MAIN = 0x00, // W
     WAKE_UP        = 0x01, // W
     IS_WOKEN_UP    = 0x02, // R
@@ -44,7 +44,7 @@ enum class NET_REG_DPR {
 };
 
 /* Prop Board */
-enum class NET_REG_PRB {
+enum NET_REG_PRB {
     TIMESTAMP_MAIN  = 0x00, // W
     WAKE_UP         = 0x01, // W
     IS_WOKEN_UP     = 0x02, // R
