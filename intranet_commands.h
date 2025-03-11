@@ -32,6 +32,9 @@
 #define ON  0xAC  // Activate
 #define OFF 0xDE  // Deactivate
 
+/* Each transfer involves 4-bytes of data */
+#define NET_XFER_SIZE 4
+
 /* Havoc DPR */
 enum NET_REG_DPR {
     TIMESTAMP_MAIN = 0x00, // W
