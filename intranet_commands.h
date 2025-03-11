@@ -15,10 +15,10 @@
 #define AV_INTRANET_COMMANDS_H
 
 /* Slaves addresses */
-#define NET_ADR_DPR_ETH 0x0E
-#define NET_ADR_DPR_LOX 0x0C
-#define NET_ADR_PRB     0x0F
-#define NET_ADR_TRB     0x0A
+#define NET_ADDR_DPR_ETH 0x0E
+#define NET_ADDR_DPR_LOX 0x0C
+#define NET_ADDR_PRB     0x0F
+#define NET_ADDR_TRB     0x0A
 
 /* Engine valves map */
 #define PRB_VO_NOC (1 << 5)
@@ -40,7 +40,8 @@ enum NET_REG_DPR {
     PRESSURIZE     = 0x03, // W
     ABORT          = 0x04, // W
     PRESSURE       = 0x05, // R
-    DN_NC          = 0x06  // R
+    DN_NC          = 0x06,  // R
+    DPR_NB_REG
 };
 
 /* Prop Board */
@@ -53,12 +54,13 @@ enum NET_REG_PRB {
     P_OIN           = 0x05, // R
     T_OIN           = 0x06, // R
     P_EIN           = 0x07, // R
-    T_EIN           = 0x07, // R
-    P_CCC           = 0x08, // R
-    T_CCC           = 0x09, // R
-    P_CIG           = 0x0A, // R
-    T_CIG           = 0x0B, // R
-    VALVES_STATE    = 0x0C  // R/W
+    T_EIN           = 0x08, // R
+    P_CCC           = 0x09, // R
+    T_CCC           = 0x0A, // R
+    P_CIG           = 0x0B, // R
+    T_CIG           = 0x0C, // R
+    VALVES_STATE    = 0x0D,  // R/W
+    PRB_NB_REG
 };
 
 /* Trigger Board */
@@ -69,7 +71,8 @@ enum NET_REG_TRB {
     CLEAR_TO_TRIGGER = 0x03, // W
     PYRO_CH1         = 0x04, // R/W
     PYRO_CH2         = 0x05, // R/W
-    PYRO_CH3         = 0x06  // R/W
+    PYRO_CH3         = 0x06, // R/W
+    TRB_NB_REG
 };
 
 /* Cameras */
