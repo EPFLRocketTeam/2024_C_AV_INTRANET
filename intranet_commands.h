@@ -42,43 +42,43 @@
 
 /* Havoc DPR */
 enum NET_REG_DPR {
-    TIMESTAMP_MAIN = 0x00, // -W
-    WAKE_UP        = 0x01, // -W
-    IS_WOKEN_UP    = 0x02, // R-
-    PRESSURIZE     = 0x03, // -W
-    ABORT          = 0x04, // -W
-    PRESSURE       = 0x05, // R-
-    DN_NC          = 0x06, // R-
+    DPR_TIMESTAMP_MAIN = 0x00, // -W
+    DPR_WAKE_UP        = 0x01, // -W
+    DPR_IS_WOKEN_UP    = 0x02, // R-
+    DPR_PRESSURIZE     = 0x03, // -W
+    DPR_ABORT          = 0x04, // -W
+    DPR_PRESSURE       = 0x05, // R-
+    DPR_DN_NC          = 0x06, // R-
     DPR_NB_REG
 };
 
 /* Prop Board */
 enum NET_REG_PRB {
-    TIMESTAMP_MAIN  = 0x00, // -W
-    WAKE_UP         = 0x01, // -W
-    IS_WOKEN_UP     = 0x02, // R-
-    CLEAR_TO_IGNITE = 0x03, // -W
-    FSM_PRB         = 0x04, // R-
-    P_OIN           = 0x05, // R-
-    T_OIN           = 0x06, // R-
-    P_EIN           = 0x07, // R-
-    T_EIN           = 0x08, // R-
-    P_CCC           = 0x09, // R-
-    T_CCC           = 0x0A, // R-
-    P_CIG           = 0x0B, // R-
-    T_CIG           = 0x0C, // R-
-    VALVES_STATE    = 0x0D, // R/W
+    PRB_TIMESTAMP_MAIN  = 0x00, // -W
+    PRB_WAKE_UP         = 0x01, // -W
+    PRB_IS_WOKEN_UP     = 0x02, // R-
+    PRB_CLEAR_TO_IGNITE = 0x03, // -W
+    PRB_FSM_PRB         = 0x04, // R-
+    PRB_P_OIN           = 0x05, // R-
+    PRB_T_OIN           = 0x06, // R-
+    PRB_P_EIN           = 0x07, // R-
+    PRB_T_EIN           = 0x08, // R-
+    PRB_P_CCC           = 0x09, // R-
+    PRB_T_CCC           = 0x0A, // R-
+    PRB_P_CIG           = 0x0B, // R-
+    PRB_T_CIG           = 0x0C, // R-
+    PRB_VALVES_STATE    = 0x0D, // R/W
     PRB_NB_REG
 };
 
 /* Trigger Board */
 enum NET_REG_TRB {
-    TIMESTAMP_MAIN   = 0x00, // -W
-    WAKE_UP          = 0x01, // -W
-    IS_WOKEN_UP      = 0x02, // R-
-    CLEAR_TO_TRIGGER = 0x03, // -W
-    PYROS            = 0x04, // R/W
-    HAS_TRIGGERED    = 0x05, // R-
+    TRB_TIMESTAMP_MAIN   = 0x00, // -W
+    TRB_WAKE_UP          = 0x01, // -W
+    TRB_IS_WOKEN_UP      = 0x02, // R-
+    TRB_CLEAR_TO_TRIGGER = 0x03, // -W
+    TRB_PYROS            = 0x04, // R/W
+    TRB_HAS_TRIGGERED    = 0x05, // R-
     TRB_NB_REG
 };
 
