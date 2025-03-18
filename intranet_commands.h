@@ -21,12 +21,12 @@
 #define NET_ADDR_TRB     0x0A
 
 /* Engine valves map */
-#define PRB_VO_NOC (1 << 5)
-#define PRB_VE_NO  (1 << 4)  
-#define PRB_IO_NCC (1 << 3)
-#define PRB_IE_NC  (1 << 2)
-#define PRB_MO_BC  (1 << 1)
-#define PRB_ME_B   (1 << 0)
+#define PRB_VO_NOC 5    // 101
+#define PRB_VE_NO  4    // 100 
+#define PRB_IO_NCC 3    // 011
+#define PRB_IE_NC  2    // 010
+#define PRB_MO_BC  1    // 001
+#define PRB_ME_B   0    // 000
 
 /* Pyro channels map */
 #define TRB_PYRO1 (0xFF << 0)
