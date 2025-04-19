@@ -47,8 +47,13 @@ enum NET_REG_DPR {
     DPR_IS_WOKEN_UP    = 0x02, // R-
     DPR_PRESSURIZE     = 0x03, // -W
     DPR_ABORT          = 0x04, // -W
-    DPR_PRESSURE       = 0x05, // R-
-    DPR_DN_NC          = 0x06, // R-
+    DPR_L_XTA          = 0x05, // R-
+    DPR_P_XTA          = 0x06, // R-
+    DPR_T_XTA          = 0x07, // R-
+    DPR_P_NCO          = 0x08, // R-
+    DPR_T_NCO          = 0x09, // R-
+    DPR_VALVE_PX_NC    = 0x0A, // RW
+    DPR_VALVE_DN_NC    = 0x0B, // RW
     DPR_NB_REG
 };
 
