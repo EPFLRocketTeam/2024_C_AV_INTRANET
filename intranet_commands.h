@@ -21,12 +21,12 @@
 #define NET_ADDR_TRB     0x0A
 
 /* Engine valves map */
-#define PRB_VO_NOC (1 << 5)
-#define PRB_VE_NO  (1 << 4)  
-#define PRB_IO_NCC (1 << 3)
-#define PRB_IE_NC  (1 << 2)
-#define PRB_MO_BC  (1 << 1)
-#define PRB_ME_B   (1 << 0)
+#define PRB_VO_NOC 0b101
+#define PRB_VE_NO  0b100
+#define PRB_IO_NCC 0b011
+#define PRB_IE_NC  0b010
+#define PRB_MO_BC  0b001
+#define PRB_ME_B   0b000
 
 /* Pyro channels map */
 #define TRB_PYRO1 (0xFF << 0)
@@ -39,6 +39,21 @@
 
 /* Each transfer involves 4-bytes of data */
 #define NET_XFER_SIZE 4
+
+// Valve open degrees (4 LSB mapping)
+// TODO: see in meeting PR for the degrees definition
+enum class ValveOpenDegree : uint8_t {
+    DEG_0   = 0b0000, // 0 degrees
+    DEG_20  = 0b0001, // 20 degrees
+    DEG_45  = 0b0010, // 45 degrees
+    DEG_55  = 0b0011, // 55 degrees
+    DEG_60  = 0b0100, // 60 degrees
+    DEG_75  = 0b0101, // 75 degrees
+    DEG_90  = 0b0110, // 90 degrees
+    DEG_120 = 0b0111, // 120 degrees
+    DEG_180 = 0b1000, // 180 degrees
+    // Unused: 1001 - 1111
+};
 
 /* Havoc DPR */
 enum NET_REG_DPR {
