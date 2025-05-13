@@ -15,10 +15,13 @@
 #define AV_INTRANET_COMMANDS_H
 
 /* Slaves addresses */
-#define NET_ADDR_DPR_ETH 0x0E
-#define NET_ADDR_DPR_LOX 0x0C
-#define NET_ADDR_PRB     0x0F
-#define NET_ADDR_TRB     0x0A
+#define NET_ADDR_DPR_ETH  0x0E
+#define NET_ADDR_DPR_LOX  0x0C
+#define NET_ADDR_PRB      0x0F
+#define NET_ADDR_TRB      0x0A
+#define NET_ADDR_CAM_SEP  0x1C
+#define NET_ADDR_CAM_UP   0x2C
+#define NET_ADDR_CAM_DOWN 0x3C
 
 /* Engine valves map */
 #define PRB_VO_NOC (1 << 5)
@@ -88,11 +91,11 @@ enum NET_REG_TRB {
 };
 
 /* Cameras */
-// enum NET_REG_CAM {
-//     TIMESTAMP_MAIN = 0x00, // -W
-//     WAKE_UP        = 0x01, // -W
-//     IS_WOKEN_UP    = 0x02, // R-
-//     RECORDING      = 0x03  // R/W
-// };
+enum NET_REG_CAM {
+    CAM_TIMESTAMP_MAIN = 0x00, // -W
+    CAM_WAKE_UP        = 0x01, // -W
+    CAM_IS_WOKEN_UP    = 0x02, // R-
+    CAM_RECORDING      = 0x03  // R/W
+};
 
 #endif /* AV_INTRANET_COMMANDS_H */
