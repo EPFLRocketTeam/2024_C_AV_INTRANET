@@ -23,13 +23,14 @@
 #define NET_ADDR_CAM_UP   0x2C
 #define NET_ADDR_CAM_DOWN 0x3C
 
-/* Engine valves map */
-#define PRB_VO_NOC (1 << 5)
-#define PRB_VE_NO  (1 << 4)  
-#define PRB_IO_NCC (1 << 3)
-#define PRB_IE_NC  (1 << 2)
-#define PRB_MO_BC  (1 << 1)
-#define PRB_ME_B   (1 << 0)
+/* Valves map */
+// DPRs
+#define DPR_DN_NC  (0xFF << 16)
+#define DPR_PX_NC  (0xFF << 8)
+#define DPR_VX_NO  (0xFF << 0)
+// PRB
+#define PRB_MO_BC  (0xFF << 8)
+#define PRB_ME_B   (0xFF << 0)
 
 /* Pyro channels map */
 #define TRB_PYRO1 (0xFF << 0)
@@ -37,8 +38,8 @@
 #define TRB_PYRO3 (0xFF << 16) 
 
 /* For boolean data type, such as WAKE_UP */
-#define NET_CMD_ON  0xAC  // Activate
-#define NET_CMD_OFF 0xDE  // Deactivate
+#define NET_CMD_ON  0xAC  // Activate/Open
+#define NET_CMD_OFF 0xDE  // Deactivate/Close
 
 /* Each transfer involves 4-bytes of data */
 #define NET_XFER_SIZE 4
@@ -55,9 +56,7 @@ enum NET_REG_DPR {
     DPR_T_XTA          = 0x07, // R-
     DPR_P_NCO          = 0x08, // R-
     DPR_T_NCO          = 0x09, // R-
-    DPR_VALVE_PX_NC    = 0x0A, // RW
-    DPR_VALVE_VX_NO    = 0x0B, // RW
-    DPR_VALVE_DN_NC    = 0x0C, // RW
+    DPR_VALVES_STATE   = 0x0A, // RW
     DPR_NB_REG
 };
 
@@ -74,11 +73,8 @@ enum NET_REG_PRB {
     PRB_T_EIN           = 0x08, // R-
     PRB_P_CCC           = 0x09, // R-
     PRB_T_CCC           = 0x0A, // R-
-    PRB_P_CIG           = 0x0B, // R-
-    PRB_T_CIG           = 0x0C, // R-
-    PRB_VALVE_ME        = 0x0D, // RW
-    PRB_VALVE_MO        = 0x0E, // RW
-    PRB_IGNITER         = 0x0F, // RW
+    PRB_VALVES_STATE    = 0x0B, // RW
+    PRB_IGNITER         = 0x0C, // RW
     PRB_NB_REG
 };
 
