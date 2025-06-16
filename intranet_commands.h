@@ -56,7 +56,8 @@ enum NET_REG_DPR {
     DPR_P_NCO          = 0x08, // R-
     DPR_T_NCO          = 0x09, // R-
     DPR_VALVE_PX_NC    = 0x0A, // RW
-    DPR_VALVE_DN_NC    = 0x0B, // RW
+    DPR_VALVE_VX_NO    = 0x0B, // RW
+    DPR_VALVE_DN_NC    = 0x0C, // RW
     DPR_NB_REG
 };
 
@@ -75,7 +76,9 @@ enum NET_REG_PRB {
     PRB_T_CCC           = 0x0A, // R-
     PRB_P_CIG           = 0x0B, // R-
     PRB_T_CIG           = 0x0C, // R-
-    PRB_VALVES_STATE    = 0x0D, // R/W
+    PRB_VALVE_ME        = 0x0D, // RW
+    PRB_VALVE_MO        = 0x0E, // RW
+    PRB_IGNITER         = 0x0F, // RW
     PRB_NB_REG
 };
 
@@ -85,7 +88,7 @@ enum NET_REG_TRB {
     TRB_WAKE_UP          = 0x01, // -W
     TRB_IS_WOKEN_UP      = 0x02, // R-
     TRB_CLEAR_TO_TRIGGER = 0x03, // -W
-    TRB_PYROS            = 0x04, // R/W
+    TRB_PYROS            = 0x04, // RW
     TRB_HAS_TRIGGERED    = 0x05, // R-
     TRB_NB_REG
 };
@@ -95,7 +98,7 @@ enum NET_REG_CAM {
     CAM_TIMESTAMP_MAIN = 0x00, // -W
     CAM_WAKE_UP        = 0x01, // -W
     CAM_IS_WOKEN_UP    = 0x02, // R-
-    CAM_RECORDING      = 0x03  // R/W
+    CAM_RECORDING      = 0x03  // RW
 };
 
 #endif /* AV_INTRANET_COMMANDS_H */
