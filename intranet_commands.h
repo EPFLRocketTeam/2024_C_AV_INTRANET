@@ -38,8 +38,8 @@
 #define TRB_PYRO3 (0xFF << 16) 
 
 /* For boolean data type, such as WAKE_UP */
-#define NET_CMD_ON  0xAC  // Activate/Open
-#define NET_CMD_OFF 0xDE  // Deactivate/Close
+#define NET_CMD_ON  0x64  // Activate/Open
+#define NET_CMD_OFF 0x0D  // Deactivate/Close
 
 /* Each transfer involves 4-bytes of data */
 #define NET_XFER_SIZE 4
