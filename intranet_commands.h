@@ -23,19 +23,29 @@
 #define AV_NET_ADDR_CAM_UP   0x2C
 #define AV_NET_ADDR_CAM_DOWN 0x3C
 
+/* Bitshifts */
+#define AV_NET_SHIFT_DN_NC 16
+#define AV_NET_SHIFT_PX_NC 8
+#define AV_NET_SHIFT_VX_NO 0
+#define AV_NET_SHIFT_MO_BC 8
+#define AV_NET_SHIFT_ME_B  0
+#define AV_NET_SHIFT_PYRO3 16
+#define AV_NET_SHIFT_PYRO2 8
+#define AV_NET_SHIFT_PYRO1 0
+
 /* Valves map */
 // DPRs
-#define AV_NET_DPR_VALVE_DN_NC  (0xFF << 16) // COPV vent
-#define AV_NET_DPR_VALVE_PX_NC  (0xFF << 8)  // Tank pressure regulation
-#define AV_NET_DPR_VALVE_VX_NO  (0xFF << 0)  // Tank vent
+#define AV_NET_DPR_VALVE_DN_NC  (0xFF << AV_NET_SHIFT_DN_NC) // COPV vent
+#define AV_NET_DPR_VALVE_PX_NC  (0xFF << AV_NET_SHIFT_PX_NC)  // Tank pressure regulation
+#define AV_NET_DPR_VALVE_VX_NO  (0xFF << AV_NET_SHIFT_VX_NO)  // Tank vent
 // PRB
-#define AV_NET_PRB_VALVE_MO_BC  (0xFF << 8)
-#define AV_NET_PRB_VALVE_ME_B   (0xFF << 0)
+#define AV_NET_PRB_VALVE_MO_BC  (0xFF << AV_NET_SHIFT_MO_BC)
+#define AV_NET_PRB_VALVE_ME_B   (0xFF << AV_NET_SHIFT_ME_B)
 
 /* Pyro channels map */
-#define AV_NET_TRB_PYRO3 (0xFF << 16) 
-#define AV_NET_TRB_PYRO2 (0xFF << 8)
-#define AV_NET_TRB_PYRO1 (0xFF << 0)
+#define AV_NET_TRB_PYRO3 (0xFF << AV_NET_SHIFT_PYRO3) 
+#define AV_NET_TRB_PYRO2 (0xFF << AV_NET_SHIFT_PYRO2)
+#define AV_NET_TRB_PYRO1 (0xFF << AV_NET_SHIFT_PYRO1)
 
 /* For boolean data type, such as the valves */
 #define AV_NET_CMD_ON  0x64  // Activate/Open
