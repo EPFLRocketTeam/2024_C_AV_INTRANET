@@ -78,14 +78,15 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_IS_WOKEN_UP     = 0x02, // R-
     AV_NET_PRB_CLEAR_TO_IGNITE = 0x03, // -W
     AV_NET_PRB_FSM_PRB         = 0x04, // R-
-    AV_NET_PRB_P_OIN           = 0x05, // R-
-    AV_NET_PRB_T_OIN           = 0x06, // R-
-    AV_NET_PRB_P_EIN           = 0x07, // R-
-    AV_NET_PRB_T_EIN           = 0x08, // R-
-    AV_NET_PRB_P_CCC           = 0x09, // R-
-    AV_NET_PRB_T_CCC           = 0x0A, // R-
-    AV_NET_PRB_VALVES_STATE    = 0x0B, // RW
-    AV_NET_PRB_IGNITER         = 0x0C, // RW
+    AV_NET_PRB_ABORT           = 0x05, // -W
+    AV_NET_PRB_P_OIN           = 0x06, // R-
+    AV_NET_PRB_T_OIN           = 0x07, // R-
+    AV_NET_PRB_P_EIN           = 0x08, // R-
+    AV_NET_PRB_T_EIN           = 0x09, // R-
+    AV_NET_PRB_P_CCC           = 0x0A, // R-
+    AV_NET_PRB_T_CCC           = 0x0B, // R-
+    AV_NET_PRB_VALVES_STATE    = 0x0C, // RW
+    AV_NET_PRB_IGNITER         = 0x0D, // RW
     AV_NET_PRB_NB_REG
 };
 
