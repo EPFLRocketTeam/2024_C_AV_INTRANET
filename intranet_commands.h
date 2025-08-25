@@ -71,7 +71,7 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_NB_REG
 };
 
-// Prop Board
+// ============== Prop Board CMD ===============
 enum AV_NET_REG_PRB {
     AV_NET_PRB_TIMESTAMP       = 0x00, // -W
     AV_NET_PRB_WAKE_UP         = 0x01, // -W
@@ -88,6 +88,18 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_VALVES_STATE    = 0x0C, // RW
     AV_NET_PRB_IGNITER         = 0x0D, // RW
     AV_NET_PRB_NB_REG
+};
+
+// =============== Prop Board FSM ===============
+enum prbFSM
+{
+    IDLE,
+    CLEAR_TO_IGNITE,
+    IGNITION_SQ,
+    SHUTDOWN_SQ,
+    REQUEST_ABORT,
+    ABORT,
+    ERROR
 };
 
 // Trigger Board
