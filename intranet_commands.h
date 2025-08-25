@@ -91,13 +91,11 @@ enum AV_NET_REG_PRB {
 };
 
 // =============== Prop Board FSM ===============
-enum prbFSM
-{
+enum PRB_FSM {
     IDLE,
     CLEAR_TO_IGNITE,
     IGNITION_SQ,
     SHUTDOWN_SQ,
-    REQUEST_ABORT,
     ABORT,
     ERROR
 };
