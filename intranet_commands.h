@@ -62,7 +62,7 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_IS_WOKEN_UP    = 0x02, // R-
     AV_NET_DPR_PRESSURIZE     = 0x03, // -W
     AV_NET_DPR_ABORT          = 0x04, // -W
-    AV_NET_DPR_L_XTA          = 0x05, // R-  Tank level
+    AV_NET_DPR_L_XTA          = 0x05, // R-  debrived -> not measured anymore
     AV_NET_DPR_P_XTA          = 0x06, // R-  Tank pressure
     AV_NET_DPR_T_XTA          = 0x07, // R-  Tank temp
     AV_NET_DPR_P_NCO          = 0x08, // R-  COPV pressure
@@ -70,20 +70,6 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_VALVES_STATE   = 0x0A, // RW
     AV_NET_DPR_NB_REG
 };
-
-enum DPR_FSM
-{
-    SAFE,
-    HOLD,
-    MANUAL,
-    INITIALIZE_PRESSURIZATION,
-    PRESSURIZATION,
-    INITIALIZE_REGULATION,
-    REGULATION,
-    PASSIVATION,
-    ABORT_DPR
-};
-
 
 // ============== Prop Board CMD ===============
 enum AV_NET_REG_PRB {
@@ -102,6 +88,7 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_T_EIN_PT1000    = 0x0C, // R-
     AV_NET_PRB_VALVES_STATE    = 0x0D, // RW
     AV_NET_PRB_IGNITER         = 0x0E, // RW
+    AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
     AV_NET_PRB_NB_REG
 };
 
