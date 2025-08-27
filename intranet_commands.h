@@ -71,6 +71,20 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_NB_REG
 };
 
+enum DPR_FSM
+{
+    SAFE,
+    HOLD,
+    MANUAL,
+    INITIALIZE_PRESSURIZATION,
+    PRESSURIZATION,
+    INITIALIZE_REGULATION,
+    REGULATION,
+    PASSIVATION,
+    ABORT_DPR
+};
+
+
 // ============== Prop Board CMD ===============
 enum AV_NET_REG_PRB {
     AV_NET_PRB_TIMESTAMP       = 0x00, // -W
@@ -97,7 +111,7 @@ enum PRB_FSM {
     CLEAR_TO_IGNITE,            // Wait for ignition order & only state from which the ignition can be triggered
     IGNITION_SQ,                // Execute ignition sequence
     SHUTDOWN_SQ,                // Execute shutdown sequence
-    ABORT,                      // Abort current operation
+    ABORT_PRB,                  // Abort current operation
     ERROR
 };
 
