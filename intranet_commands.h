@@ -89,6 +89,7 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_VALVES_STATE    = 0x0D, // RW
     AV_NET_PRB_IGNITER         = 0x0E, // RW
     AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
+    AV_NET_PRB_LIFTOFF         = 0x10, // W-
     AV_NET_PRB_NB_REG
 };
 
@@ -98,7 +99,8 @@ enum PRB_FSM {
     CLEAR_TO_IGNITE,            // Wait for ignition order & only state from which the ignition can be triggered
     IGNITION_SQ,                // Execute ignition sequence
     SHUTDOWN_SQ,                // Execute shutdown sequence
-    ABORT_PRB,                  // Abort current operation
+    ABORT_ON_GROUND,            // Abort current operation on ground
+    ABORT_ON_FLIGHT,            // Abort current operation in flight
     ERROR
 };
 
