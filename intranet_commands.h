@@ -89,6 +89,7 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_VALVES_STATE    = 0x0D, // RW
     AV_NET_PRB_IGNITER         = 0x0E, // RW
     AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
+    AV_NET_PRB_PASSIVATE       = 0x10, // -W
     AV_NET_PRB_NB_REG
 };
 
@@ -97,7 +98,7 @@ enum PRB_FSM {
     IDLE,                       // Wait for order from FC & collect data from sensors
     CLEAR_TO_IGNITE,            // Wait for ignition order & only state from which the ignition can be triggered
     IGNITION_SQ,                // Execute ignition sequence
-    PASSIVATION_SQ,                // Execute shutdown sequence
+    PASSIVATION_SQ,             // Execute shutdown sequence
     ABORT,                      // Abort current operation
     ERROR
 };
