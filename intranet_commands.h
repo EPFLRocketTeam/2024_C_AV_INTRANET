@@ -91,6 +91,7 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_IGNITER         = 0x0E, // RW
     AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
     AV_NET_PRB_PASSIVATE       = 0x10, // -W
+    AV_NET_PRB_RESET           = 0x11, // -W
     AV_NET_PRB_NB_REG
 };
 
