@@ -69,6 +69,7 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_T_NCO          = 0x09, // R-  COPV temp
     AV_NET_DPR_VALVES_STATE   = 0x0A, // RW
     AV_NET_DPR_PASSIVATE      = 0x0B, // -W
+    AV_NET_DPR_RESET          = 0x0C, // -W
     AV_NET_DPR_NB_REG
 };
 
