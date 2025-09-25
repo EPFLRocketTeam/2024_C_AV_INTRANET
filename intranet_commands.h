@@ -115,6 +115,7 @@ enum AV_NET_REG_TRB {
     AV_NET_TRB_CLEAR_TO_TRIGGER = 0x03, // -W
     AV_NET_TRB_PYROS            = 0x04, // RW
     AV_NET_TRB_HAS_TRIGGERED    = 0x05, // R-
+    AV_NET_TRB_RESET            = 0x06, // -W
     AV_NET_TRB_NB_REG
 };
 
