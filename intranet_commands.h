@@ -122,9 +122,8 @@ enum AV_NET_REG_TRB {
 // Cameras
 enum AV_NET_REG_CAM {
     AV_NET_CAM_TIMESTAMP      = 0x00, // -W
-    AV_NET_CAM_WAKE_UP        = 0x01, // -W
-    AV_NET_CAM_IS_WOKEN_UP    = 0x02, // R-
-    AV_NET_CAM_RECORDING      = 0x03  // RW
+    AV_NET_CAM_RECORDING      = 0x01, // RW
+    AV_NET_CAM_POWER          = 0x02  // RW
 };
 
 #endif /* AV_INTRANET_COMMANDS_H */
