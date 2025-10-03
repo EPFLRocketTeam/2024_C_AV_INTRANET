@@ -62,14 +62,17 @@ enum AV_NET_REG_DPR {
     AV_NET_DPR_IS_WOKEN_UP    = 0x02, // R-
     AV_NET_DPR_PRESSURIZE     = 0x03, // -W
     AV_NET_DPR_ABORT          = 0x04, // -W
-    AV_NET_DPR_L_XTA          = 0x05, // R-  debrived -> not measured anymore
     AV_NET_DPR_P_XTA          = 0x06, // R-  Tank pressure
     AV_NET_DPR_T_XTA          = 0x07, // R-  Tank temp
     AV_NET_DPR_P_NCO          = 0x08, // R-  COPV pressure
     AV_NET_DPR_T_NCO          = 0x09, // R-  COPV temp
-    AV_NET_DPR_VALVES_STATE   = 0x0A, // RW
-    AV_NET_DPR_PASSIVATE      = 0x0B, // -W
-    AV_NET_DPR_RESET          = 0x0C, // -W
+    AV_NET_DPR_T_EXT_COPV     = 0x0A, // R-  COPV External temp (DPR_ETH T_EIN)
+    AV_NET_DPR_T_FLS_EXT_ULH  = 0x0B, // R-  LOx Ullage how (DPR_ETH T_OIN)
+    AV_NET_DPR_T_FLS_EXT_ULL  = 0x0C, // R-  LOx Ullage low (DPR_LOX T_EIN)
+    AV_NET_DPR_T_FLS_EXT_MID  = 0x0D, // R-  LOx Tank mid (DPR_LOX T_OIN)
+    AV_NET_DPR_VALVES_STATE   = 0x0F, // RW
+    AV_NET_DPR_PASSIVATE      = 0x10, // -W
+    AV_NET_DPR_RESET          = 0x11, // -W
     AV_NET_DPR_NB_REG
 };
 
@@ -82,12 +85,12 @@ enum AV_NET_REG_PRB {
     AV_NET_PRB_FSM_PRB         = 0x04, // R-
     AV_NET_PRB_ABORT           = 0x05, // -W    On to passivate Off when on ground
     AV_NET_PRB_P_OIN           = 0x06, // R-
-    AV_NET_PRB_T_OIN           = 0x07, // R-
-    AV_NET_PRB_P_EIN           = 0x08, // R-
-    AV_NET_PRB_T_EIN           = 0x09, // R-
-    AV_NET_PRB_P_CCC           = 0x0A, // R-
-    AV_NET_PRB_T_CCC           = 0x0B, // R-
-    AV_NET_PRB_T_EIN_PT1000    = 0x0C, // R-
+    AV_NET_PRB_P_EIN           = 0x07, // R-
+    AV_NET_PRB_T_EIN           = 0x08, // R-
+    AV_NET_PRB_P_CCC           = 0x09, // R-
+    AV_NET_PRB_T_CCC           = 0x0A, // R-
+    AV_NET_PRB_T_BOT_OTA       = 0x0B, // R-  (PRB T_OIN PT1000)
+    AV_NET_PRB_T_FLS_EXT_BOT   = 0x0C, // R-  (PRB T_EIN PT1000)
     AV_NET_PRB_VALVES_STATE    = 0x0D, // RW
     AV_NET_PRB_IGNITER         = 0x0E, // RW
     AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
