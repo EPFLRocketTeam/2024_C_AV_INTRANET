@@ -58,45 +58,41 @@
 // Havoc DPR
 enum AV_NET_REG_DPR {
     AV_NET_DPR_TIMESTAMP      = 0x00, // -W
-    AV_NET_DPR_WAKE_UP        = 0x01, // -W
-    AV_NET_DPR_IS_WOKEN_UP    = 0x02, // R-
-    AV_NET_DPR_PRESSURIZE     = 0x03, // -W
-    AV_NET_DPR_ABORT          = 0x04, // -W
-    AV_NET_DPR_P_XTA          = 0x06, // R-  Tank pressure
-    AV_NET_DPR_T_XTA          = 0x07, // R-  Tank temp
-    AV_NET_DPR_P_NCO          = 0x08, // R-  COPV pressure
-    AV_NET_DPR_T_NCO          = 0x09, // R-  COPV temp
-    AV_NET_DPR_T_EXT_COPV     = 0x0A, // R-  COPV External temp (DPR_ETH T_EIN)
-    AV_NET_DPR_T_FLS_EXT_ULH  = 0x0B, // R-  LOx Ullage how (DPR_ETH T_OIN)
-    AV_NET_DPR_T_FLS_EXT_ULL  = 0x0C, // R-  LOx Ullage low (DPR_LOX T_EIN)
-    AV_NET_DPR_T_FLS_EXT_MID  = 0x0D, // R-  LOx Tank mid (DPR_LOX T_OIN)
-    AV_NET_DPR_VALVES_STATE   = 0x0F, // RW
-    AV_NET_DPR_PASSIVATE      = 0x10, // -W
-    AV_NET_DPR_RESET          = 0x11, // -W
+    AV_NET_DPR_PRESSURIZE     = 0x01, // -W
+    AV_NET_DPR_ABORT          = 0x02, // -W
+    AV_NET_DPR_P_XTA          = 0x03, // R-  Tank pressure
+    AV_NET_DPR_T_XTA          = 0x04, // R-  Tank temp
+    AV_NET_DPR_P_NCO          = 0x05, // R-  COPV pressure
+    AV_NET_DPR_T_NCO          = 0x06, // R-  COPV temp
+    AV_NET_DPR_T_EXT_COPV     = 0x07, // R-  COPV External temp (DPR_ETH T_EIN)
+    AV_NET_DPR_T_FLS_EXT_ULH  = 0x08, // R-  LOx Ullage how (DPR_ETH T_OIN)
+    AV_NET_DPR_T_FLS_EXT_ULL  = 0x09, // R-  LOx Ullage low (DPR_LOX T_EIN)
+    AV_NET_DPR_T_FLS_EXT_MID  = 0x0A, // R-  LOx Tank mid (DPR_LOX T_OIN)
+    AV_NET_DPR_VALVES_STATE   = 0x0B, // RW
+    AV_NET_DPR_PASSIVATE      = 0x0C, // -W
+    AV_NET_DPR_RESET          = 0x0D, // -W
     AV_NET_DPR_NB_REG
 };
 
 // ============== Prop Board CMD ===============
 enum AV_NET_REG_PRB {
     AV_NET_PRB_TIMESTAMP       = 0x00, // -W
-    AV_NET_PRB_WAKE_UP         = 0x01, // -W
-    AV_NET_PRB_IS_WOKEN_UP     = 0x02, // R-
-    AV_NET_PRB_CLEAR_TO_IGNITE = 0x03, // -W
-    AV_NET_PRB_FSM_PRB         = 0x04, // R-
-    AV_NET_PRB_ABORT           = 0x05, // -W    On to passivate Off when on ground
-    AV_NET_PRB_P_OIN           = 0x06, // R-
-    AV_NET_PRB_P_EIN           = 0x07, // R-
-    AV_NET_PRB_T_EIN           = 0x08, // R-
-    AV_NET_PRB_P_CCC           = 0x09, // R-
-    AV_NET_PRB_T_CCC           = 0x0A, // R-
-    AV_NET_PRB_T_BOT_OTA       = 0x0B, // R-  (PRB T_OIN PT1000)
-    AV_NET_PRB_T_FLS_EXT_BOT   = 0x0C, // R-  (PRB T_EIN PT1000)
-    AV_NET_PRB_VALVES_STATE    = 0x0D, // RW
-    AV_NET_PRB_IGNITER         = 0x0E, // RW
-    AV_NET_PRB_SPECIFIC_IMP    = 0x0F, // R-
-    AV_NET_PRB_PASSIVATE       = 0x10, // -W
-    AV_NET_PRB_RESET           = 0x11, // -W
-    AV_NET_PRB_PRESSURE_CHECK  = 0x12, // R-
+    AV_NET_PRB_CLEAR_TO_IGNITE = 0x01, // -W
+    AV_NET_PRB_FSM_PRB         = 0x02, // R-
+    AV_NET_PRB_ABORT           = 0x03, // -W    On to passivate Off when on ground
+    AV_NET_PRB_P_OIN           = 0x04, // R-
+    AV_NET_PRB_P_EIN           = 0x05, // R-
+    AV_NET_PRB_T_EIN           = 0x06, // R-
+    AV_NET_PRB_P_CCC           = 0x07, // R-
+    AV_NET_PRB_T_CCC           = 0x08, // R-
+    AV_NET_PRB_T_BOT_OTA       = 0x09, // R-  (PRB T_OIN PT1000)
+    AV_NET_PRB_T_FLS_EXT_BOT   = 0x0A, // R-  (PRB T_EIN PT1000)
+    AV_NET_PRB_VALVES_STATE    = 0x0B, // RW
+    AV_NET_PRB_IGNITER         = 0x0C, // RW
+    AV_NET_PRB_SPECIFIC_IMP    = 0x0D, // R-
+    AV_NET_PRB_PASSIVATE       = 0x0E, // -W
+    AV_NET_PRB_RESET           = 0x0F, // -W
+    AV_NET_PRB_PRESSURE_CHECK  = 0x10, // R-
     AV_NET_PRB_NB_REG
 };
 
